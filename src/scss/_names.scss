@@ -10,20 +10,47 @@ article{
     /*display:inline-block;*/
     position:relative;
     width:100vmin;
+    height:100vh;
     min-height:100vmin;
-    margin-left:auto;
-    margin-right:auto;
-    //float:left;
+    margin:auto;
+    float:none;
     //border: 0.3rem solid;
     //margin-bottom: -0.3rem;
     //-webkit-column-count:2;
-    @include landscape {
+
+    /* @include landscape {
         transform: rotate(180deg);
         //background: red;
     }
     @include portrait {
         transform: rotate(360deg);
         //background: blue;
+    } */
+
+}
+
+.about {
+    //margin-top:100vmin;
+    height:100vh;
+    //position:static;
+}
+
+.where {
+//position: static;
+width: 100%;
+height: 100vh;
+min-height: 100vmin;
+margin: auto;
+float: none;
+}
+
+.names {
+    .title {
+        column-span: all;
+    }
+    float:left;
+    ul {
+        columns:2;
     }
 }
 
