@@ -1,0 +1,58 @@
+section {
+    //margin-left:17.5vw;
+    display:table-cell;
+    width:50%;
+    //top:0;
+    //margin-left:-25vw;
+
+}
+article{
+    /*display:inline-block;*/
+    position:relative;
+    width:100vmin;
+    min-height:100vmin;
+    margin-left:auto;
+    margin-right:auto;
+    //float:left;
+    //border: 0.3rem solid;
+    //margin-bottom: -0.3rem;
+    //-webkit-column-count:2;
+    @include landscape {
+        transform: rotate(180deg);
+        //background: red;
+    }
+    @include portrait {
+        transform: rotate(360deg);
+        //background: blue;
+    }
+}
+
+ul.top-right-left-bottom {
+
+        li{
+            list-style:none;
+            position:absolute;
+            width:50vmin;
+            height:50vmin;
+            padding:5vmin;
+        }
+        :nth-child(1){
+        top:0;
+        left:0;
+        }
+        :nth-child(2){
+        transform: rotate(90deg);
+        top:0;
+        right:0;
+        }
+        :nth-child(3){
+        transform: rotate(-90deg);
+        bottom:0;
+        left:0;
+        }
+        :nth-child(4){
+        transform: rotate(180deg);
+        bottom:0em;
+        right:0em;
+        }
+    }

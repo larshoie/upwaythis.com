@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "Cooper Hewitt";
+    src: url(fonts/CooperHewitt-Book.woff);
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Cooper Hewitt";
+    src: url(fonts/CooperHewitt-Bold.woff);
+    font-weight: bold;
+}
+
+a{
+	color:$text;
+	text-decoration:none;
+	margin-bottom:0.1rem;
+	border-bottom:0.1rem solid transparent;
+}
+
+a:hover{
+	text-decoration:none;
+	border-color:$text;
+
+}
+
+/* default typography presets */
+
+
+h1{
+	font-size: 4rem;
+}
+h2{
+	font-size:3rem;
+}
+h3{
+	font-size:2rem;
+	font-weight: normal;
+}
+h4{
+	font-size:1.5rem;
+	font-weight: normal;
+}
+h5{
+	font-size:1rem;
+	font-weight: normal;
+}
+h6{
+	font-size:0.5rem;
+	font-weight: normal;
+}
+p{
+
+}

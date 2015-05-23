@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>upwaythis</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script src="assets/js/modernizr.min.js"></script>
+
+  <!--
+
+  <script>
+
+    function includeJs(jsFilePath) {
+
+        var js = document.createElement("script");
+
+        js.type = "text/javascript";
+        js.src = jsFilePath;
+
+        document.body.appendChild(js);
+
+        }
+
+    if (Modernizr.touch) {
+        // nothing so far
+    }
+
+    else {
+        includeJs("assets/js/scripts.min.js");
+    }
+
+
+  </script>
+
+  !-->
+
+  <script src="assets/js/scripts.min.js"></script>
+
+</head>
+<body>
+
+  <section>
+    <article class="about">
+      <ul class="top-right-left-bottom">
+        <li>This Way Up: design from different perspectives</li>
+        <li>Thinking inside the box since 2015.</li>
+        <li>A pop up shop brought to you by second year BA Graphic Design students at Central Saint Martins.</li>
+        <li>Explore the design perspectives of 80 students through 800 limited edition objects and experiences.</li>
+      </ul>
+    </article>
+
+    <article class="names">
+      <ul>
+        <li><h5>This pop up shop features works from:</h5></li>
+        <li>Adam Willis</li>
+        <li>Adhiraj Singh</li>
+        <li>Aisha A Olatokunbo Tijani</li>
+        <li>Amy Chau</li>
+        <li>Amy Louise Elms</li>
+        <li>Angele T A M Delajoux</li>
+        <li>Anh Thu Dam</li>
+        <li>Atikhun Jansanjai</li>
+        <li>Barnaby Pau Jury Morgan</li>
+        <li>Benjamin Ezekiel Sing</li>
+        <li><a href="http://www.chweetan.com"></a>Chinhwee Tan</li>
+        <li>Claire Ann Köster</li>
+        <li>Clara Alicia Metter</li>
+        <li>Connor Daly</li>
+        <li>Eftal Soral</li>
+        <li>Emilien Malo Rabin</li>
+        <li>Emily Schofield</li>
+        <li>Gaetan Bernede</li>
+        <li>Gautam Tankaria</li>
+        <li>Georgia Cranstoun</li>
+        <li>Hannah Nightingale</li>
+        <li>Hattie Wade</li>
+        <li>Ho Yiu Frankie Leung</li>
+        <li><a href="http://hortensesells.tumblr.com"></a>Hortense Franc</li>
+        <li>Isobel Ann Lily Orton</li>
+        <li>Jack William James Smith</li>
+        <li>Jasmine Kurino</li>
+        <li>Jillian Ostek</li>
+        <li>Jiwon Song (Sophia)</li>
+        <li>John Cubillan</li>
+        <li><a href="http://jordan-devos.com">Jordan DeVos</a></li>
+        <li><a href="http://jordanwoodage.com">Jordan Woodage</a></li>
+        <li>Joshua James Smith</li>
+        <li>Kateryna Kotikhina</li>
+        <li>Katie Lambe</li>
+        <li>Ke Fan</li>
+        <li>Kerry McGranaghan</li>
+        <li>Lara Bashar Arafeh</li>
+        <li><a href="http://larshoie.com">Lars Høie</a></li>
+        <li>Liisa Roll</li>
+        <li><a href="http://www.behance.net/louisaluk">Louisa Luk</a></li>
+        <li>Louise Carolina Dyhrfort</li>
+        <li>Luying Xu</li>
+        <li>Melissa Zee</li>
+        <li>Michael Sierra</li>
+        <li>Mika Hosono</li>
+        <li>Natalie Patricia Preston</li>
+        <li>Navjot Singh Chana</li>
+        <li>Nikki Johanna Ritmeijer</li>
+        <li>Oi Kei Elky Li</li>
+        <li>Olga Bagaeva</li>
+        <li>Olga Carpenco</li>
+        <li>Philippine M C Sohet</li>
+        <li>Pui Sang Wu</li>
+        <li>Rafael Bruni De Lima</li>
+        <li>Raymond Hui</li>
+        <li><a href="http://www.rebeccabartola.com">Rebecca Bartola</a></li>
+        <li>Rebecca Lardeur</li>
+        <li>Satoko Furusawa</li>
+        <li>Sean Wei Jun Song</li>
+        <li>Shannon Swinburn</li>
+        <li><a href="http://www.amandachoy.com">Shiau Hui Choy, Amanda</a></li>
+        <li>Stephanie Nadine Kaiser</li>
+        <li>Su Jung Choi</li>
+        <li>Ta-Chun Hung</li>
+        <li>Tatiana Ermolaeva</li>
+        <li>Theo Bernard</li>
+        <li><a href="http://theresecappelen.com">Therese Cappelen</a></li>
+        <li>Varvara Zelenko</li>
+        <li>Vorathap Kiathapkajon</li>
+        <li>Xinxin Zheng</li>
+        <li>Yangzi Wang</li>
+        <li>Yi Lin Kezia Kong</li>
+        <li>Yi-Hsuan Chen</li>
+        <li>Yuli Serfaty</li>
+        <li>Kenneth Lim </li>
+      </ul>
+    </article>
+
+  </section>
+
+      <section role="main" class="main wrapper clearfix cube-container" id="slides">
+
+        <article id="s6">
+
+          <div class="sandbox ">
+            <div class="cube  labels">
+              <span class="top side  "></span>
+              <span class="left side "></span>
+              <span class="right side "></span>
+              <span class="bottom side ">
+                <span class="back side "></span>
+              </span>
+            </div>
+          </div>
+
+        </article>
+
+      </section>
+
+      <script>
+          var anglesNow = 0;
+      $(window).click(function(e){
+          // caching the object for performance reasons
+          var $elem = $('.about');
+
+          // we use a pseudo object for the animation
+          // (starts from `0` to `angle`), you can name it as you want
+          $({deg: anglesNow}).animate({deg: anglesNow+90}, {
+              duration: 400,
+              step: function(now) {
+                  // in the step-callback (that is fired each step of the animation),
+                  // you can use the `now` paramter which contains the current
+                  // animation-position (`0` up to `angle`)
+                  $elem.css({
+                       transform: 'rotate(' + now + 'deg)'
+                  });
+              }
+          });
+          anglesNow=anglesNow+90;
+       });
+      </script>
+
+</body>
+</html>
