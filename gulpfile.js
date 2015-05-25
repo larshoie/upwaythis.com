@@ -1,13 +1,5 @@
-/*=============================================
-=            Gulp Starter by @dope            =
-=============================================*/
-
-/**
-*
-* The packages we are using
-* Not using gulp-load-plugins as it is nice to see whats here.
-*
-**/
+// The packages we are using
+// Not using gulp-load-plugins as it is nice to see whats here.
 var gulp         = require('gulp');
 var sass         = require('gulp-sass');
 var browserSync  = require('browser-sync');
@@ -18,16 +10,13 @@ var uglify       = require('gulp-uglify');
 var rename       = require("gulp-rename");
 var imagemin     = require("gulp-imagemin");
 var pngquant     = require('imagemin-pngquant');
+var minifyHTML   = require('gulp-minify-html');
 
-/**
-*
-* Styles
-* - Compile
-* - Compress/Minify
-* - Catch errors (gulp-plumber)
-* - Autoprefixer
-*
-**/
+// Sass
+// Compile
+// Compress/Minify
+// Catch errors (gulp-plumber)
+// Autoprefixer
 gulp.task('sass', function() {
   gulp.src('src/scss/style.scss')
     .pipe(sass())
@@ -40,29 +29,33 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('dist/css'));
 });
 
+// HTML
+// Minify that shit as well (why not?)
+gulp.task('minify-html', function() {
+  var opts = {
+    //conditionals: true,
+    //comments:true
+  };
 
-/**
-*
-* BrowserSync.io
-* - Watch CSS, JS & HTML for changes
-* - View project at: localhost:3000
-*
-**/
+  return gulp.src('src/*.html')
+    .pipe(minifyHTML(opts))
+    .pipe(gulp.dest('dist/'));
+});
+
+// BrowserSync.io
+// Watch CSS, JS & HTML for changes
+// View project at: localhost:3000
 gulp.task('browser-sync', function() {
-  browserSync.init(['dist/css/*.css', 'dist/js/**/*.js', 'index.html'], {
+  browserSync.init(['dist/css/*.css', 'dist/js/**/*.js', 'dist/*.html'], {
     server: {
-      baseDir: './'
+      baseDir: 'dist'
     }
   });
 });
 
-
-/**
-*
-* Javascript
-* - Uglify
-*
-**/
+// Javascript
+// Uglify/minify
+// Coming soon, fuckin concat those files!
 gulp.task('scripts', function() {
   gulp.src('src/js/*.js')
   .pipe(uglify())
@@ -72,12 +65,9 @@ gulp.task('scripts', function() {
   .pipe(gulp.dest('dist/js'))
 });
 
-/**
-*
-* Images
-* - Compress them!
-*
-**/
+// Images
+// Compress them!
+// (Coming soon – responsive images, maybe)
 gulp.task('images', function () {
   return gulp.src('src/images/*')
   .pipe(imagemin({
@@ -88,16 +78,12 @@ gulp.task('images', function () {
   .pipe(gulp.dest('dist/images'));
 });
 
-
-/**
-*
-* Default task
-* - Runs sass, browser-sync, scripts and image tasks
-* - Watchs for file changes for images, scripts and sass/css
-*
-**/
-gulp.task('default', ['sass', 'browser-sync', 'scripts', 'images'], function () {
+// Default task
+// Runs sass, browser-sync, scripts and image tasks
+// Watchs for file changes for images, scripts and sass/css
+gulp.task('default', ['sass', 'browser-sync', 'scripts', 'minify-html', 'images'], function () {
   gulp.watch('src/scss/**/*.scss', ['sass']);
   gulp.watch('src/js/**/*.js', ['scripts']);
   gulp.watch('src/images/*', ['images']);
+  gulp.watch('src/*.html', ['minify-html']);
 });

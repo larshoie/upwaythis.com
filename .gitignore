@@ -1,5 +1,4 @@
 dist
-config.codekit
 node_modules
 .sass-cache
 .DS_Store
