@@ -1,4 +1,6 @@
-# Now with gulp! Yay!
+![This way up](readme.png?raw=true "This way up")
+
+### Now with gulp! Yay!
 - Compiles, autoprefixes and minifies your Sass.
 - Uglifys (minifies) your JS
 - Minifies your HTML
