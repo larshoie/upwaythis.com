@@ -1,4 +1,4 @@
-![This way up](readme.png?raw=true "This way up")
+![This way up](readme.jpg?raw=true "This way up")
 
 ### Now with gulp! Yay!
 - Compiles, autoprefixes and minifies your Sass.
