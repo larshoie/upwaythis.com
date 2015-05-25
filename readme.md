@@ -9,7 +9,7 @@
 
 ### Getting started
 
-1. Clone the repo or download the files.
+1. [Clone](https://github.com/larshoie/upwaythis.com.git) the repo or [download](https://github.com/larshoie/upwaythis.com/archive/master.zip).
 2. Fire up terminal and `cd` into your folder. (drag and drop the folder if you're lazy/efficient)
 3. Run: `npm install` (This will build your packages)
 4. Then run: `gulp`(This will build your assets and generate your BrowserSync URL)
