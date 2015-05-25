@@ -1,11 +1,11 @@
 ![This way up](readme.jpg?raw=true "This way up")
 
 ### Now with gulp! Yay!
-- Compiles, autoprefixes and minifies your Sass.
+- Compiles, [autoprefixes](https://github.com/postcss/autoprefixer) and minifies your [Sass](http://sass-lang.com).
 - Uglifys (minifies) your JS
 - Minifies your HTML
 - Compresses your Images
-- Generates a BrowserSync URL for you to access on all devices for testing. Automagically refreshes and syncs all of them.
+- Generates a [BrowserSync](http://www.browsersync.io/) URL for you to access on all devices for testing. Automagically refreshes and syncs all of them.
 
 ### Getting started
 
@@ -16,6 +16,6 @@
 5. Enjoy the robots.
 
 ### Deploy
-`Surge` or copy the contents of the dist folder to wherever.
+[`Surge`](http://surge.sh) or copy the contents of the dist folder to wherever.
 
 (Gulpfile based on the amazing gulp starter by Joe Richardson.)
