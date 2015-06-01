@@ -105,15 +105,17 @@ width: 318.89px;
     left:4vw;
     right:4vw;
   }
-  h3.three {
-    transform:rotate(90deg);
-    transform-origin:bottom left;
+  h3.left {
+    transform:rotate(-90deg);
+    transform-origin:center center;
   }
-  h3.two {
+  h3.bottom {
     transform:rotate(180deg);
+    transform-origin:50% 90%;
   }
   h3.right {
-    transform:rotate(-90deg);
+    transform:rotate(90deg);
+    transform-origin:50% 140%;
   }
   float: none;
 	position: relative;
