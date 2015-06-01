@@ -105,6 +105,16 @@ width: 318.89px;
     left:4vw;
     right:4vw;
   }
+  h3.three {
+    transform:rotate(90deg);
+    transform-origin:bottom left;
+  }
+  h3.two {
+    transform:rotate(180deg);
+  }
+  h3.right {
+    transform:rotate(-90deg);
+  }
   float: none;
 	position: relative;
 	width: 100%;
