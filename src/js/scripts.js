@@ -7,8 +7,8 @@ $(document).ready(function(){
 
 	$(document).mousemove(function(e){
 
-		var x = e.pageX;
-		var y = e.pageY;
+		var x = e.morphbuttonX;
+		var y = e.morphbuttonY;
 
 		var rotateY = (360/winWidth) * y;
 		var rotateX = (360/winHeight) * x;

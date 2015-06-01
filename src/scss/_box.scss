@@ -54,13 +54,13 @@ left:0; */
     //transform: rotate(180deg);
     display:block;
     float: left;
-    width:33.333vw;
+    //width:33.333vw;
     margin:0;
     padding:4vmin;
-    height:50vh;
-    height:33.333vw;
+    //height:50vh;
+    //height:33.333vw;
     width:  50vw;
-    height: 50vw;
+    height: 50vh;
     //background:$red;
     //outline:4px solid $red;
     &:hover {
@@ -90,8 +90,8 @@ left:0; */
 /*   width:100%;
 width: 318.89px;
   height: 425.187px; */
-  width:  33.333vw;
-	height: 33.333vw;
+  //width:  33.333vw;
+	//height: 33.333vw;
   //background:$red;
 }
 
@@ -103,6 +103,7 @@ width: 318.89px;
   h3 {
     position: absolute;
     left:4vw;
+    right:4vw;
   }
   float: none;
 	position: relative;
@@ -152,11 +153,6 @@ width: 318.89px;
     z-index:999;
   }
 }
-
-.location h3 {
-    /* white-space:pre!important;
-    display:block; */
-  }
 
 .one {
   //transform: rotate(0deg);

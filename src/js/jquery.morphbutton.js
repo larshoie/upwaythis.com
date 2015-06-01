@@ -1,7 +1,7 @@
 (function($){
 
   $.fn.extend({
-      morphButton: function(options) {
+      morphbutton: function(options) {
 
           this.defaultOptions = {};
           var settings = $.extend({}, this.defaultOptions, options);
@@ -130,14 +130,14 @@
 
   //Auto Init
   $(document).ready(function(){
-    $(".morphbutton").morphButton();
+    $(".morphbutton").morphbutton();
   });
 
 }(jQuery));
 
 // (function($){
 //   $.fn.extend({
-//       morphButton: function(options) {
+//       morphbutton: function(options) {
 //           this.defaultOptions = {};
 //           var settings = $.extend({}, this.defaultOptions, options);
 
@@ -150,6 +150,6 @@
 //   //Auto Init
 //   $(document).ready(function(){
 
-//     $(".morphButton").morphButton();
+//     $(".morphbutton").morphbutton();
 //   });
 // })(jQuery);

@@ -23,8 +23,6 @@ var gulp         = require('gulp'),
         }
     };
 
-
-
 // Sass
 // Compile
 // Compress/Minify
@@ -40,6 +38,11 @@ gulp.task('sass', function() {
     .pipe(prefix('last 2 versions', '> 1%'))
     .pipe(plumber())
     .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('fonts', function() {
+   gulp.src('src/fonts/**/*.{ttf,woff,eof,svg}')
+   .pipe(gulp.dest('dist/css/fonts'));
 });
 
 // HTML
@@ -91,9 +94,6 @@ gulp.task('images', function () {
   .pipe(gulp.dest('dist/images'));
 });
 
-
-
-
 gulp.task('svgSprite', function () {
   return gulp.src('src/svg/*.svg')
       .pipe(plumber())
@@ -101,14 +101,12 @@ gulp.task('svgSprite', function () {
       .pipe(gulp.dest('dist'));
 });
 
-
-
-
 // Default task
 // Runs sass, browser-sync, scripts and image tasks
 // Watchs for file changes for images, scripts and sass/css
-gulp.task('default', ['sass', 'browser-sync', 'scripts', 'minify-html', 'images', 'svgSprite'], function () {
+gulp.task('default', ['sass', 'fonts', 'browser-sync', 'scripts', 'minify-html', 'images', 'svgSprite'], function () {
   gulp.watch('src/scss/**/*.scss', ['sass']);
+  gulp.watch('src/fonts', ['fonts']);
   gulp.watch('src/js/**/*.js', ['scripts']);
   gulp.watch('src/images/*', ['images']);
   gulp.watch('src/svg/*.svg', ['svgSprite']);

@@ -53,6 +53,10 @@ ul {
 
 //@include scrollbars(0.25rem, $red);
 
-.flip {
+.flip, .flip-up {
   transform:rotate(180deg);
+}
+
+.flip-down{
+  transform:rotate(-180deg);
 }
