@@ -59,8 +59,12 @@ left:0; */
     padding:4vmin;
     //height:50vh;
     //height:33.333vw;
-    width:  50vw;
-    height: 50vh;
+    width: 100vw;
+    height:100vmin;
+      @include screen {
+      width:  50vw;
+      height: 50vh;
+      }
     //background:$red;
     //outline:4px solid $red;
     &:hover {
@@ -79,10 +83,6 @@ left:0; */
     left: 40vw;
     width: 0;
     height: 0;
-}
-
-.old-content {
-  @include hide;
 }
 
 .boxes svg {
