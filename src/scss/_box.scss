@@ -177,41 +177,13 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.cube-container {
+.logo {
     @include screen {
       position:absolute;
       pointer-events:none;
       top:0;
       left:0;
     }
-}
- .cube-container * {
-  transition: all 0.25s ease-in-out;
-  outline: 1px solid transparent;
-}
-
-.cube-container div {
-  perspective: 1000vw;
 }
 
 .cube,
@@ -228,7 +200,7 @@
 }
 
 .cube {
-  //background:#fff;
+  perspective: 1000vw;
   transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0em) translateY(0em) translateZ(0em);
 }
 .cube .side {
@@ -266,15 +238,4 @@
   transition: none;
   transform: translateY(10vw);
   transform-origin: 50% 50% -10vw;
-
-}
-
-@keyframes rotate-cube-slow {
-  0% {
-    transform: rotateY(0deg) translateY(2em);
-  }
-
-  100% {
-    transform: rotateY(360deg) translateY(2em);
-  }
 }
