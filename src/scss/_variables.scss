@@ -10,6 +10,7 @@ $red:#DE3A14;
 // $mobile-width: 600px;
    $tablet-width: 700px;
    $screen-width: 960px;
+   $big-screen-width: 1900px;
 
    /*
    @mixin mobile {
@@ -29,6 +30,12 @@ $red:#DE3A14;
 
    @mixin screen {
      @media (min-width: $screen-width) {
+       @content;
+     }
+   }
+
+   @mixin big-screen {
+     @media (min-width: $big-screen-width) {
        @content;
      }
    }

@@ -42,6 +42,10 @@ h3{
 	@include screen {
 	font-size:3vw;
 	}
+	@include big-screen {
+	font-size:2vw;
+	}
+
 	font-size:9vw;
 	font-weight: normal;
 }
