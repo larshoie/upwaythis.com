@@ -41,22 +41,27 @@ gulp.task('sass', function() {
 });
 
 gulp.task('fonts', function() {
-   gulp.src('src/fonts/**/*.{ttf,woff,eof,svg}')
+   gulp.src('src/fonts/*.{ttf,woff,eof,svg}')
    .pipe(gulp.dest('dist/css/fonts'));
+});
+
+gulp.task('html', function() {
+   gulp.src('src/*.html')
+   .pipe(gulp.dest('dist/'));
 });
 
 // HTML
 // Minify that shit as well (why not?)
-gulp.task('minify-html', function() {
-  var opts = {
+// gulp.task('minify-html', function() {
+//   var opts = {
     //conditionals: true,
     //comments:true
-  };
+  // };
 
-  return gulp.src('src/*.html')
-    .pipe(minifyHTML(opts))
-    .pipe(gulp.dest('dist/'));
-});
+//   return gulp.src('src/*.html')
+//     .pipe(minifyHTML(opts))
+//     .pipe(gulp.dest('dist/'));
+// });
 
 // BrowserSync.io
 // Watch CSS, JS & HTML for changes
@@ -104,11 +109,21 @@ gulp.task('svgSprite', function () {
 // Default task
 // Runs sass, browser-sync, scripts and image tasks
 // Watchs for file changes for images, scripts and sass/css
-gulp.task('default', ['sass', 'fonts', 'browser-sync', 'scripts', 'minify-html', 'images', 'svgSprite'], function () {
+gulp.task
+('default',
+['sass',
+'fonts',
+'browser-sync',
+'scripts',
+//'minify-html',
+'images',
+'svgSprite'],
+function () {
   gulp.watch('src/scss/**/*.scss', ['sass']);
   gulp.watch('src/fonts', ['fonts']);
   gulp.watch('src/js/**/*.js', ['scripts']);
   gulp.watch('src/images/*', ['images']);
   gulp.watch('src/svg/*.svg', ['svgSprite']);
-  gulp.watch('src/*.html', ['minify-html']);
+  //gulp.watch('src/*.html', ['minify-html']);
+  gulp.watch('src/*.html', ['html']);
 });
