@@ -25,7 +25,7 @@ html, body{
 	font-family: "Cooper Hewitt", "Helvetica", sans-serif;
 	font-size:5vw;
   max-width:100vw;
-  //overflow-x: hidden;
+  overflow-x: hidden;
   @include screen {
     font-size: 1.6rem;
   }
@@ -50,7 +50,7 @@ ul {
   padding:5vw;
 }
 
-//@include scrollbars(0.25rem, $red);
+@include scrollbars(0.20rem, $red);
 
 .flip, .flip-up {
   transform:rotate(180deg);

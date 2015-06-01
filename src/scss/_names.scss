@@ -1,7 +1,7 @@
 section {
     //margin-left:17.5vw;
-    display:table-cell;
-    width:50%;
+        //display:table-cell;
+        //width:50%;
     //top:0;
     //margin-left:-25vw;
 
@@ -35,13 +35,34 @@ article{
     //position:static;
 }
 
-.where {
-//position: static;
-/* width: 100%;
-height: 100vh;
-min-height: 100vmin;
-margin: auto;
-float: none; */
+
+#people {
+    clear:both;
+    ul {
+        //columns:1;
+        //font-size:9vw;
+        color:$text;
+        background:transparent;
+        float:left;
+        @include screen {
+            width:calc(50vw - 0.20rem);
+        }
+        width:100vw;
+        height:auto;
+        overflow:visible;
+        //column-gap:35vw;
+        margin:0!important;
+        //columns:1;
+        //column-gap:35vw;
+        font-size:2vw;
+        //transform:rotate(180deg);
+        padding:2rem 5vw;
+        @include screen {
+            &:last-of-type {
+                padding-left:0;
+            }
+        }
+    }
 }
 
 .names {
@@ -50,9 +71,13 @@ float: none; */
     }
     float:left;
     ul {
-        columns:2;
-        column-gap:35vw;
-        font-size:2vw;
+        @include screen {
+            //columns:2;
+            font-size:1.4vw;
+            }
+        columns:1;
+        font-size:9vw;
+        //column-gap:35vw;
         margin:0!important;
         //columns:1;
         //column-gap:35vw;

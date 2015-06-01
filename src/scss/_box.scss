@@ -17,9 +17,11 @@
 .arrows {
   position: absolute;
   pointer-events:none;
+  mix-blend-mode: multiply;
+  z-index:0;
   div {
     position: relative;
-    width: 33.333vw;
+    width: calc(33.333vw - 0.10rem);
     height: 80vh;
     @include screen {
     height: 33.333vh;
@@ -47,6 +49,7 @@
 }
 
 .boxes {
+  overflow:hidden;
   padding:0;
   margin:0;
   ul {
@@ -62,7 +65,7 @@
     width: 100vw;
     height:100vmin;
       @include screen {
-      width:  50vw;
+      width:  calc(50vw - 0.10rem);
       height: 50vh;
       }
     //outline:4px solid $red;
@@ -73,11 +76,14 @@
 }
 
 .logo a {
+  overflow:visible!important;
   //@include hide;
     z-index: 9999;
     padding: 0;
-    //position: absolute;
     position: fixed;
+    /*   @include screen {
+      position: absolute;
+    } */
     top: 42vh;
     left: 42vw;
     width:15vw;
