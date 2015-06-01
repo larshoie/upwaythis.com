@@ -1,16 +1,29 @@
 // The packages we are using
 // Not using gulp-load-plugins as it is nice to see whats here.
-var gulp         = require('gulp');
-var sass         = require('gulp-sass');
-var browserSync  = require('browser-sync');
-var prefix       = require('gulp-autoprefixer');
-var plumber      = require('gulp-plumber');
-//var concat       = require('gulp-concat');
-var uglify       = require('gulp-uglify');
-var rename       = require("gulp-rename");
-var imagemin     = require("gulp-imagemin");
-var pngquant     = require('imagemin-pngquant');
-var minifyHTML   = require('gulp-minify-html');
+var gulp         = require('gulp'),
+    sass         = require('gulp-sass'),
+    browserSync  = require('browser-sync'),
+    prefix       = require('gulp-autoprefixer'),
+    plumber      = require('gulp-plumber'),
+//  concat       = require('gulp-concat');
+    uglify       = require('gulp-uglify'),
+    rename       = require('gulp-rename'),
+    imagemin     = require('gulp-imagemin'),
+    pngquant     = require('imagemin-pngquant'),
+    minifyHTML   = require('gulp-minify-html'),
+    svgSprite    = require('gulp-svg-sprite'),
+    config       = {
+        "svg": {
+            "dimensionAttributes": false
+        },
+        "mode": {
+            "symbol": {
+                "example": true
+            }
+        }
+    };
+
+
 
 // Sass
 // Compile
@@ -78,12 +91,26 @@ gulp.task('images', function () {
   .pipe(gulp.dest('dist/images'));
 });
 
+
+
+
+gulp.task('svgSprite', function () {
+  return gulp.src('src/svg/*.svg')
+      .pipe(plumber())
+      .pipe(svgSprite(config)).on('error', function(error){ console.log(error); })
+      .pipe(gulp.dest('dist'));
+});
+
+
+
+
 // Default task
 // Runs sass, browser-sync, scripts and image tasks
 // Watchs for file changes for images, scripts and sass/css
-gulp.task('default', ['sass', 'browser-sync', 'scripts', 'minify-html', 'images'], function () {
+gulp.task('default', ['sass', 'browser-sync', 'scripts', 'minify-html', 'images', 'svgSprite'], function () {
   gulp.watch('src/scss/**/*.scss', ['sass']);
   gulp.watch('src/js/**/*.js', ['scripts']);
   gulp.watch('src/images/*', ['images']);
+  gulp.watch('src/svg/*.svg', ['svgSprite']);
   gulp.watch('src/*.html', ['minify-html']);
 });

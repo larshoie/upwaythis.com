@@ -1,46 +1,259 @@
-.cube-container {
-  display:none;
-    @include screen {
-      width: 100%;
-      position:fixed;
-      z-index:-1;
-      font-size: 2.4em;
+/* .up .a-1, .up .a-3, .up .a-5, .up .a-7, .up .a-9 {
+  transform: rotate(0deg);
+}
+
+.up .a-2, .up .a-4, .up .a-6, .up .a-8, .up .a-10 {
+  transform: rotate(180deg);
+} */
+
+.a-1, .a-3, .a-5, .a-7, .a-9 {
+  transform: rotate(0deg);
+}
+
+.a-2, .a-4, .a-6, .a-8, .a-10 {
+  transform: rotate(180deg);
+}
+
+.arrows {
+  position: absolute;
+  //z-index: -1;
+  //z-index:999;
+  pointer-events:none;
+/*   top:0;
+left:0; */
+  div {
+    //transform: rotate(-90deg);
+    width: 300px;
+    width: 33.333vw;
+    position: relative;
+    height: 300px;
+    height: 33.333vh;
+    //overflow: hidden;
+    float: left;
     }
+  svg {
+    width: 20vw;
+    height: 20vw;
+    fill: $red;
+    //fill: #E54926;
+    display: block;
+    overflow: visible;
+    position: relative;
+    z-index:999;
+  }
+}
+
+.boxes {
+  //position:relative;
+  padding:0;
+  margin:0;
+  ul {
+    padding:0;
+  }
+  a {
+    //transform: rotate(180deg);
+    display:block;
+    float: left;
+    width:33.333vw;
+    margin:0;
+    padding:4vmin;
+    height:50vh;
+    height:33.333vw;
+    width:  50vw;
+    height: 50vw;
+    //background:$red;
+    //outline:4px solid $red;
+    &:hover {
+      border:none;
+    }
+  }
+}
+
+.logo a {
+  //@include hide;
+    z-index: 9999;
+    padding: 0;
+    position: absolute;
+    position: fixed;
+    top: 23vh;
+    left: 40vw;
+    width: 0;
+    height: 0;
+}
+
+.old-content {
+  @include hide;
+}
+
+.boxes svg {
+  @include hide;
+/*   width:100%;
+width: 318.89px;
+  height: 425.187px; */
+  width:  33.333vw;
+	height: 33.333vw;
+  //background:$red;
+}
+
+
+
+
+
+.img-block{
+  h3 {
+    position: absolute;
+    left:4vw;
+  }
+  float: none;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+  margin:0;
+  padding:0!important;
+  //background:#fff;
+}
+
+.img{
+  width: 100%;
+  height: 100%;
+  display:block;
+	z-index:0;
+	visibility: hidden;
+}
+.img.active{
+	visibility: visible;
+}
+.clear{
+  clear: both;
+}
+
+.ggggiffy-text {
+  font-size: 10vw;
+  //background: yellow;
+  color: #fff;
+}
+
+.item {
+  transform: rotate(180deg);
+  width: 100%;
+  height: 100%;
+  display:block;
+  background-size: cover!important;
+  background-repeat:none;
+  img {
+    width: 100%;
+    height:auto;
+  }
+  h2 {
+    position:absolute;
+    top: 25%;
+    left:4vw;
+    z-index:999;
+  }
+}
+
+.location h3 {
+    /* white-space:pre!important;
+    display:block; */
+  }
+
+.one {
+  //transform: rotate(0deg);
+}
+
+.two {
+  //transform: rotate(90deg);
+}
+
+.three {
+  //transform: rotate(180deg);
+}
+
+
+.morphbutton-content a {
+  display:inline!important;
+  height:initial;
+  width:initial;
+  padding:0;
+  float:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cube-container {
+    //display:block;
+    @include screen {
+      position:absolute;
+      //position:relative;
+      //z-index: 99;
+      pointer-events:none;
+      top:0;
+      left:0;
+      //@include hide;
+    }
+    //@include hide;
+
 }
  .cube-container * {
   transition: all 0.25s ease-in-out;
+  outline: 1px solid transparent;
 }
 
-.cube-container article {
-  width: 100%;
-  height:100vh;
-  padding: 1em;
-  margin: 16% 0;
-  overflow: hidden;
-  perspective: 110vmin;
+.cube-container div {
+  //position:relative;
+  //min-height:100%;
+  //width:100vw;
+  perspective: 800vw;
+  display: block;
+  //position: relative;
+  /* width: 100vmin; */
+  /* height: 100vh; */
+  /* min-height: 100vmin; */
+  /* margin: auto; */
+  /* float: none; */
 }
-.cube-container article:nth-of-type(1) {
+.cube-container div:nth-of-type(1) {
   margin-top: 0;
 }
-.cube-container article:last-child {
-  margin-bottom: 0.5em;
+.cube-container div:last-child {
 }
 
 
 .cube,
 .cube .side {
-  width: 30vmin;
-  height:30vmin;
-
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: inset 0 0 0 10px #000;/*  0 0 0px 1px #ff0000; */
+  width: 20vw;
+  height:20vw;
+  //background: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 0 0 1vw #000;/*  0 0 0px 1px #ff0000; */
   transform-style: preserve-3d;
-  background:url(http://www.upwaythis.com/images/logo-2.png);
+  background:url('../../symbol/svg/logo-box.svg');
   background-size:90%;
-  background-position:50% 50%;
+  background-position:50%;
+  outline: 1px solid transparent;
 }
 
 .cube {
+  //background:#fff;
   transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0em) translateY(0em) translateZ(0em);
 }
 .cube .side {
@@ -49,27 +262,27 @@
   left: 0;
 }
 .cube .top {
-  top: -30vmin;
+  top: -20vw;
   transform: rotateX(90deg);
   transform-origin: 50% 100%;
 }
 .cube .left {
-  left: -30vmin;
+  left: -20vw;
   transform: rotateY(-90deg);
   transform-origin: 100% 50%;
 }
 .cube .right {
-  left: 30vmin;
+  left: 20vw;
   transform: rotateY(90deg);
   transform-origin: 0% 50%;
 }
 .cube .bottom {
-  top:30vmin;
+  top:20vw;
   transform: rotateX(-90deg);
   transform-origin: 50% 0%;
 }
 .cube .bottom .back {
-  top: 30vmin;
+  top: 20vw;
   transform: rotateX(-90deg);
   transform-origin: 50% 0%;
 }
@@ -82,7 +295,7 @@
  * Primitives
  */
 #s6 {
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 

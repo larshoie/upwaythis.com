@@ -20,18 +20,20 @@ $(document).ready(function(){
     });
 
 
-  $( ".cube" ).click(function() {
+							//   $( ".cube" ).click(function() {
+							//
+							// $('#s6 .top, #s6 .left,#s6 .right,#s6 .bottom,#s6 .back,#s6 .front').addClass('flat');
+							// count += 1;
+							// //
+							//       $('.cube').css({
+							//         'transform':'rotateY(' + '0' + 'deg) rotateX(' + '0' + 'deg)',
+							//         'transition':' all 3.3s ease'
+							//
+							//
+							//
+							//       });
 
-$('#s6 .top, #s6 .left,#s6 .right,#s6 .bottom,#s6 .back,#s6 .front').addClass('flat');
-count += 1;
-//
-      $('.cube').css({
-        'transform':'rotateY(' + '0' + 'deg) rotateX(' + '0' + 'deg)',
-        'transition':' all 3.3s ease'
 
-
-
-      });
 
 //         $(window).dblclick(function(){
 //           $(".cube").panzoom();
@@ -39,7 +41,7 @@ count += 1;
 //   });
 
 
-    } );
+    //} );
 
 
 //   $(window).dblclick(function(){
@@ -76,25 +78,25 @@ count += 1;
 
 
 
-
-//click to rotate
-var anglesNow = 0;
-$(window).click(function(e){
-// caching the object for performance reasons
-var $elem = $('.about');
-
-// we use a pseudo object for the animation
-// (starts from `0` to `angle`), you can name it as you want
-$({deg: anglesNow}).animate({deg: anglesNow+90}, {
-		duration: 400,
-		step: function(now) {
-				// in the step-callback (that is fired each step of the animation),
-				// you can use the `now` paramter which contains the current
-				// animation-position (`0` up to `angle`)
-				$elem.css({
-						transform: 'rotate(' + now + 'deg)'
-				});
-		}
-});
-anglesNow=anglesNow+90;
-});
+				//
+				// //click to rotate
+				// var anglesNow = 0;
+				// $(window).click(function(e){
+				// // caching the object for performance reasons
+				// var $elem = $('.about');
+				//
+				// // we use a pseudo object for the animation
+				// // (starts from `0` to `angle`), you can name it as you want
+				// $({deg: anglesNow}).animate({deg: anglesNow+90}, {
+				// 		duration: 400,
+				// 		step: function(now) {
+				// 				// in the step-callback (that is fired each step of the animation),
+				// 				// you can use the `now` paramter which contains the current
+				// 				// animation-position (`0` up to `angle`)
+				// 				$elem.css({
+				// 						transform: 'rotate(' + now + 'deg)'
+				// 				});
+				// 		}
+				// });
+				// anglesNow=anglesNow+90;
+				// });

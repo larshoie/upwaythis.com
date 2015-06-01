@@ -20,7 +20,7 @@ article{
 
     /* @include landscape {
         transform: rotate(180deg);
-        //background: red;
+        //background: $red;
     }
     @include portrait {
         transform: rotate(360deg);
@@ -51,6 +51,13 @@ float: none;
     float:left;
     ul {
         columns:2;
+        column-gap:35vw;
+        font-size:2vw;
+        margin:0!important;
+        //columns:1;
+        //column-gap:35vw;
+        //font-size:4vw;
+        //transform:rotate(180deg);
     }
 }
 

@@ -1,0 +1,114 @@
+.morphbutton.fullwidth{
+  width: 100%;
+}
+/* Buttons */
+.morphbutton-close{
+  top: 4vw;
+  left: 4vw;
+  background: none;
+  border: none;
+
+  position: absolute;
+}
+.morphbutton-open{
+  width: 100%;
+}
+
+/* Boxes */
+.morphbutton{
+  /*overflow: hidden;
+  position: absolute;*/
+
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+
+  /*transition: all .5s;*/
+}
+.morphbutton.active{
+  overflow: inherit;
+}
+.morphbutton::before{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  //background-color: #fff;
+  content: '';
+  z-index: 800;
+  opacity: 0;
+  transition: opacity .5s;
+  pointer-events: none;
+}
+.morphbutton.active::before{
+  opacity: 1;
+  pointer-events: auto;
+}
+.morphbutton .morphbutton-content{
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+  margin-left: 0;
+  margin-top: 0;
+  opacity: 0;
+  pointer-events: none;
+
+  //overflow: scroll;
+  position: fixed;
+  z-index: 998;
+  transition: opacity 0.3s 0.0s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+  transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+
+
+}
+.morphbutton.active .morphbutton-content{
+  width: 100vw!important;
+  min-height:33.333vh!important;
+  height: 100% !important;
+  padding: 4vw 12vw;
+  background-color: $red;
+  background-color: #000;
+  color:#fff;
+  left: 0 !important;
+  top: 0 !important;
+  margin-left: 0;
+  margin-top: 0;
+  //overflow: scroll;
+  //opacity: 1;
+  pointer-events: auto;
+  z-index: 999;
+  transition: opacity 0.3s 0.0s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+  transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  line-height:1.8;
+  a {
+    color:#fff;
+    &:hover {
+      border-bottom: 0.2vmin solid #fff;
+    }
+  }
+}
+.morphbutton .morphbutton-content *{
+  opacity: 0;
+}
+.morphbutton.open .morphbutton-content *{
+  opacity: 1;
+}
+
+.morphbutton.closed-anim .morphbutton-content{
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+  margin-left: 0;
+  margin-top: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  //z-index: 998;
+  transition: opacity 0.3s 0.0s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+  transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+
+
+}

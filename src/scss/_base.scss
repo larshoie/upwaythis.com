@@ -1,3 +1,8 @@
+.inlinesvg {
+  @include hide;
+}
+
+
 .it, span, .cube .side, #s1 .instructions, #s3 .sandbox1 h2, #s6 .sandbox .cube.labels .back:before {
   display: inline-block;
 }
@@ -27,6 +32,15 @@ html, body{
   }
 }
 
+/* body.down * {
+  transform:rotate(90deg);
+  //transform-origin: center center;
+}
+
+body.up * {
+  transform:rotate(0deg);
+} */
+
 ul, li {
   list-style:none;
   margin:0;
@@ -35,4 +49,10 @@ ul, li {
 
 ul {
   padding:5vw;
+}
+
+//@include scrollbars(0.25rem, $red);
+
+.flip {
+  transform:rotate(180deg);
 }
