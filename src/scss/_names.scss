@@ -37,16 +37,20 @@ article{
 
 
 #people {
-    clear:both;
+    //clear:both;
+    float:right;
+    @include screen {
+        width:calc(50vw - 0.20rem);
+    }
     ul {
         //columns:1;
         //font-size:9vw;
         color:$text;
         background:transparent;
-        float:left;
-        @include screen {
-            width:calc(50vw - 0.20rem);
-        }
+        float:none;
+/*         @include screen {
+    width:calc(50vw - 0.20rem);
+} */
         width:100vw;
         height:auto;
         overflow:visible;
@@ -56,10 +60,13 @@ article{
         //column-gap:35vw;
         font-size:2vw;
         //transform:rotate(180deg);
-        padding:2rem 5vw;
+        //padding:2rem 5vw 0;
+        padding:0 5vw 0;
+        padding-left:0;
         @include screen {
             &:last-of-type {
                 padding-left:0;
+                padding-top:0;
             }
         }
     }
