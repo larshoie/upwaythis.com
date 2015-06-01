@@ -37,37 +37,37 @@ article{
 
 
 #people {
+    //display:none;
     //clear:both;
-    float:right;
+    margin-bottom:10vh;
     @include screen {
+        float:right;
         width:calc(50vw - 0.20rem);
+        margin-bottom:0;
     }
     ul {
-        //columns:1;
-        //font-size:9vw;
         color:$text;
         background:transparent;
-        float:none;
-/*         @include screen {
-    width:calc(50vw - 0.20rem);
-} */
-        width:100vw;
+        overflow:hidden;
         height:auto;
-        overflow:visible;
-        //column-gap:35vw;
+        width:90vw;
         margin:0!important;
-        //columns:1;
-        //column-gap:35vw;
-        font-size:2vw;
-        //transform:rotate(180deg);
-        //padding:2rem 5vw 0;
-        padding:0 5vw 0;
-        padding-left:0;
+            @include screen {
+            width:calc(50vw - 0.20rem);
+            font-size:2vw;
+            //padding:0 5vw 0;
+            padding-left:0;
+            }
+        font-size:6vw;
         @include screen {
             &:last-of-type {
                 padding-left:0;
                 padding-top:0;
             }
+        }
+        li {
+            float:none;
+            width:100%;
         }
     }
 }

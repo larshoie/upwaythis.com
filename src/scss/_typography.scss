@@ -57,7 +57,10 @@ h3{
 }
 
 footer {
-	font-size: 3vw;
+	font-size: 9vw;
+	@include screen {
+	font-size:inherit;
+	}
 	h3 {
 	@include screen {
 	//font-size:1.6rem;
