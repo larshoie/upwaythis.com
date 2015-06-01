@@ -30,16 +30,22 @@ h1{
   font-weight: normal;
 }
 h2{
-	font-size:6vmin;
-  font-weight: normal;
+		@include screen {
+		font-size: 6vmin;
+		}
+	font-size:16vw;
+	font-weight: normal;
+	color: #fff;
 }
+
 h3{
-	font-size:2rem;
-  font-size:2vmin;
-  font-size:4vmin;
+	@include screen {
 	font-size:3vw;
+	}
+	font-size:9vw;
 	font-weight: normal;
 }
+
 h4{
 	font-size:1.5rem;
 	font-weight: normal;
@@ -51,7 +57,4 @@ h5{
 h6{
 	font-size:0.5rem;
 	font-weight: normal;
-}
-p{
-
 }
