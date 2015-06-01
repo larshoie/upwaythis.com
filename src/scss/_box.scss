@@ -231,7 +231,7 @@ width: 318.89px;
   //position:relative;
   //min-height:100%;
   //width:100vw;
-  perspective: 800vw;
+  perspective: 700vw;
   display: block;
   //position: relative;
   /* width: 100vmin; */
@@ -249,10 +249,10 @@ width: 318.89px;
 
 .cube,
 .cube .side {
-  width: 20vw;
-  height:20vw;
+  width: 16vw;
+  height:16vw;
   //background: rgba(255, 255, 255, 0.9);
-  box-shadow: inset 0 0 0 1vw #000;/*  0 0 0px 1px #ff0000; */
+  box-shadow: inset 0 0 0 0.8vw #000;/*  0 0 0px 1px #ff0000; */
   transform-style: preserve-3d;
   background:url('../../symbol/svg/logo-box.svg');
   background-size:90%;
@@ -270,27 +270,27 @@ width: 318.89px;
   left: 0;
 }
 .cube .top {
-  top: -20vw;
+  top: -16vw;
   transform: rotateX(90deg);
   transform-origin: 50% 100%;
 }
 .cube .left {
-  left: -20vw;
+  left: -16vw;
   transform: rotateY(-90deg);
   transform-origin: 100% 50%;
 }
 .cube .right {
-  left: 20vw;
+  left: 16vw;
   transform: rotateY(90deg);
   transform-origin: 0% 50%;
 }
 .cube .bottom {
-  top:20vw;
+  top:16vw;
   transform: rotateX(-90deg);
   transform-origin: 50% 0%;
 }
 .cube .bottom .back {
-  top: 20vw;
+  top: 16vw;
   transform: rotateX(-90deg);
   transform-origin: 50% 0%;
 }
@@ -302,26 +302,26 @@ width: 318.89px;
 /*
  * Primitives
  */
-#s6 {
-  //overflow: hidden;
+/* #s6 {
+  overflow: hidden;
 }
-
+ */
 
 
 #s6 .sandbox {
   width: 100%;
   transform-style: preserve-3d;
-  transform:translate(40%, 60%);
+  transform:translate(  2.5vw, 15vh);
 }
 #s6 .sandbox .cube {
   transition: none;
-  transform: translateY(2em);
-  transform-origin: 50% 50% -2.5em;
+  transform: translateY(10vw);
+  transform-origin: 50% 50% -10vw;
 
 }
-#s6 .sandbox .cube.rotate {
+/* #s6 .sandbox .cube.rotate {
   animation: rotate-cube-slow 8s linear infinite;
-}
+} */
 #s6 .sandbox .cube.labels:before,
 #s6 .sandbox .cube.labels .top:before,
 #s6 .sandbox .cube.labels .left:before,
@@ -332,40 +332,39 @@ width: 318.89px;
   width: 100%;
   text-align: center;
   position: absolute;
-  top: 50px;
+  //top: 50px;
 }
 
-#s6 .sandbox .cube .flat {
+/* #s6 .sandbox .cube .flat {
   transition: all 3.3s ease-in;
 }
 #s6 .sandbox .cube .top.flat {
   transform: rotateX(0deg);
-  top:-30vmin;
+  //top:-30vh;
 
 }
 #s6 .sandbox .cube .left.flat {
   transform: rotateY(0deg);
-  left: -30vmin;
+  left: -30vw;
 }
 #s6 .sandbox .cube .right.flat {
   transform: rotateY(0deg);
-    left: 30vmin;
+    left: 30vw;
 
 }
 #s6 .sandbox .cube .bottom.flat {
   transform: rotateX(0deg);
-  top:30vmin;
+  top:30vw;
 
 }
 #s6 .sandbox .cube .back.flat {
   transform: rotateX(0deg);
-  top:30vmin;
+  top:30vw;
+} */
 
-
-}
-#s6 .sandbox .cube .flat {
-   box-shadow: inset 0 0 0 10px #000;/* , 0 0 0 1px #252c5b; */
-}
+/* #s6 .sandbox .cube .flat {
+   box-shadow: inset 0 0 0 10px #000;, 0 0 0 1px #252c5b;
+} */
 
 .return-flat {
   transform:rotateX(0deg),rotateY(0deg);
